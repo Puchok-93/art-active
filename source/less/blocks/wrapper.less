@@ -1,0 +1,20 @@
+.wrapper {
+  &--printing-house {
+    padding: 0 15px;
+
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+
+@media (min-width: @desktop-width) {
+    .wrapper {
+      max-width: 1170px;
+      margin: 0 auto;
+      padding: 0 20px;
+  
+      outline: 1px solid red;
+      display: flex;
+    }
+  }

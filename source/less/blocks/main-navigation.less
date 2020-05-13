@@ -1,0 +1,103 @@
+.main-navigation {
+    padding: 0;
+    position: relative;
+    margin-bottom: 10px;
+  }
+  
+  .main-navigation__toggle {
+    position: absolute;
+    content: "";
+    top: -15px;
+    right: 10px;
+    border: none;
+    background-color: transparent;
+    height: 20px;
+  }
+  
+  .main-navigation__toggle span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background-color: #ffffff;
+    transition-duration: 0.7s;
+  }
+  
+  .main-navigation__toggle span::before,
+  .main-navigation__toggle span::after {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background-color: #ffffff;
+    content: "";
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.7s;
+  }
+  
+  .main-navigation__toggle span::before {
+    transform: translate(0, 7px);
+  }
+  
+  .main-navigation__toggle span::after {
+    transform: translate(0, -9px);
+  }
+  
+  .main-navigation__toggle--opened span {
+    transform: rotate(180deg);
+    background-color: transparent;
+  }
+  
+  .main-navigation__toggle--opened span::before {
+    transform: translate(0, 0) rotate(45deg);
+    background-color: red;
+  }
+  
+  .main-navigation__toggle--opened span::after {
+    transform: translate(0, -2px) rotate(-45deg);
+    background-color: red;
+  }
+  
+  .main-navigation--closed .menu-list__item {
+    display: none;
+  }
+
+  @media (min-width: @tablet-width) {
+    .main-navigation__toggle {
+        position: absolute;
+        content: "";
+        top: -15px;
+        right: 15px;
+        border: none;
+        background-color: transparent;
+        height: 20px;
+      }
+
+  }
+
+  @media (min-width: @tablet-width) {
+    .main-navigation__toggle {
+        position: absolute;
+        content: "";
+        top: -15px;
+        right: 15px;
+        border: none;
+        background-color: transparent;
+        height: 20px;
+      }
+
+  }
+
+  @media (min-width: @desktop-width) {
+    .main-navigation {
+        width: 100%;
+        display: flex;
+        align-items: center;
+      }
+    
+      .main-navigation--closed .menu-list__item {
+          display: block;
+        }
+    
+        .main-navigation__toggle {
+          display: none;
+        }
+  }
